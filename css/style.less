@@ -1,0 +1,430 @@
+/*============    ШРИФТЫ    ===========*/
+@font-face{
+	font-family: "KickHornet";
+	src:url("../fonts/KickHornet.eot");
+	src:url("../fonts/KickHornet.eot&#iefix") format("embedded-opentype"),
+		url("../fonts/KickHornet.woff") format("woff"),
+		url("../fonts/KickHornet.ttf") format("treutype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "Roboto-Bold";
+	src:url("..//fonts/Roboto-Bold.eot");
+	src:url("..//fonts/Roboto-Bold.eot&#iefix") format("embedded-opentype"),
+		url("..//fonts/Roboto-Bold.woff") format("woff"),
+		url("..//fonts/Roboto-Bold.ttf") format("treutype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "Roboto-Medium";
+	src:url("..//fonts/Roboto-Medium.eot");
+	src:url("..//fonts/Roboto-Medium.eot&#iefix") format("embedded-opentype"),
+		url("..//fonts/Roboto-Medium.woff") format("woff"),
+		url("..//fonts/Roboto-Medium.ttf") format("treutype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "Roboto-Regular";
+	src:url("..//fonts/Roboto-Regular.eot");
+	src:url("..//fonts/Roboto-Regular.eot&#iefix") format("embedded-opentype"),
+		url("..//fonts/Roboto-Regular.woff") format("woff"),
+		url("..//fonts/Roboto-Regular.ttf") format("treutype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "Roboto-Light";
+	src:url("..//fonts/Roboto-Light.eot");
+	src:url("..//fonts/Roboto-Light.eot&#iefix") format("embedded-opentype"),
+		url("..//fonts/Roboto-Light.woff") format("woff"),
+		url("..//fonts/Roboto-Light.ttf") format("treutype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "Roboto-Condensed";
+	src:url("..//fonts/Roboto-Condensed.eot");
+	src:url("..//fonts/Roboto-Condensed.eot&#iefix") format("embedded-opentype"),
+		url("..//fonts/Roboto-Condensed.woff") format("woff"),
+		url("..//fonts/Roboto-Condensed.ttf") format("treutype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*============    ГЛАВНЫЙ ЭКРАН    ===========*/
+body{
+	background-color: #f1f5f8;
+}
+
+
+aside{
+	height: 100vh;
+	width: 20%;
+	position: fixed;
+	background-color: #0185b5;
+	float: left;
+	color: #fff;
+	.container-fluid{
+		padding: 0;
+	}
+	h1{
+		font-family: KickHornet;
+		color: #02395b;
+		text-align: center;
+		margin-bottom: 50px;
+		margin-top: 50px;
+		span{
+			color: red;
+		}
+	}
+	p{
+			padding: 5px 40px;
+			margin: 0;
+			margin-top: 5px;
+			
+			font-family: Roboto-Light;
+			font-size: 13px;
+			a{
+				font-family: Roboto-Light;
+				font-size: 13px;
+				color: #fff;
+				&:hover{
+					text-decoration: none;
+					color: #fff;
+				};
+			}
+	}
+	
+	p.active{
+		background-color: #036b90;
+	}
+
+	h6{
+		color: #ffffff;
+		font-size: 14px;
+		padding: 10px 30px;
+		margin-bottom:20px;
+		background-color: #036b90;
+		a{
+			padding: 5px 10px;
+			margin-top: 10px;
+			
+			text-decoration: none;
+			color: #fff;
+			&:hover{
+				text-decoration: none;
+				color: #fff;
+			};
+		}
+	}
+	ul{
+		list-style: none;
+		li{
+			padding: 5px 10px;
+			margin-top: 10px;
+			background-color: #036b90;
+			a{
+				color: #fff;
+				font-size: 14px;
+				text-decoration:none;
+				margin: 0;
+				font-family: Roboto-Light;
+				&:hover{
+					text-decoration: none;
+					color: #fff;
+				};
+			}
+			a.active{
+				color: #fff;
+				&:hover{
+					text-decoration: none;
+				};
+			}
+			hr{
+				border-top: 1px solid #1a365a;
+				color: #1a365a;
+			}
+			.calcCar, .calcRecomendedServises{
+				float: right;
+				width: 15px;
+				height: 15px;
+				margin-right: 10px;
+				background-color: #1c7ad5;
+				span{
+					display: block;
+					font-size: 10px;
+					text-align: center;
+					color: #fff;
+					padding-top: 1.9px;
+				}
+			}
+		}
+	}
+	a.btn{
+		margin-left: 40px;
+		padding: 0;
+		text-align: center;
+		padding: 10px 40px;
+		border: 1px solid #517196;
+		color: #fff;
+		text-align: center;
+		margin-top: 40px;
+		&:hover{
+			color: #fff;
+			border: 1.3px solid #fff;
+			text-decoration: none;
+		};
+
+	}
+}
+
+.openUser{
+	display: none;
+	width: 240px;
+	height: 150px;
+	position: absolute;
+	right: 30px;
+	top: 50px;
+	box-shadow: 1px 1px 15px #909497;
+	z-index: 9999;
+	background-color: #fff;
+	ul{
+		list-style: none;
+		li{
+			margin-top: 5px;
+			&:last-child{
+				margin-bottom: 10px;
+			};
+			a{
+				font-size: 16px;
+				text-decoration: none;
+				color: #909497;
+				&:hover{
+					color: #46484a;
+				};
+			}
+		}
+	}
+}
+
+
+header{
+	background-color: #fff;
+	width: 80%;
+	height: 50px;
+	z-index: 999;
+	float: left;
+	position: relative;
+	left: 20%;
+	.top_line{
+		position: absolute;
+		width: 100%;
+		text-align: right;
+		margin-top: 20px;
+		margin-bottom: 300px;
+		border-bottom: 1px solid #ececec;
+		ul{
+			li{
+				border-left: 1px solid #ececec;
+				width: 170px;
+				text-align: center;
+				a{
+					font-family: Roboto-Regular;
+					font-size: 13px;
+				}
+				&:first-child{
+					border-left: none;
+				};
+			}
+		}
+		a{
+			text-decoration: none;
+			color: #a8a7a7;
+			&:hover{
+				text-decoration: none;
+				color: #464646;
+			};
+			i{
+				margin-left: 10px;
+			}
+		}
+	}
+	
+}
+
+
+
+
+.statistics_top_line{
+	position: relative;
+    left: 22%;
+    background-color: #fff;
+    width: 75%;
+    max-width: 1293px;
+    height: 100%;
+    min-height: 500px;
+    top: 35px;
+    text-align: center;
+    padding: 20px;
+    padding-top: 0;
+    border-bottom: 1px solid #d7dadd;
+    border-right: 1px solid #d7dadd;
+    border-radius: 3px;
+    margin-bottom: 35px;
+    float: left;
+	margin-right: 100%;
+    .number_statictics{
+    	position: relative;
+    	width: 100%;
+    	text-align: left;
+    	padding-top: 15px;
+    	ul.ul_number_statictics{
+    		text-align: right;
+    		list-style: none;
+    		li{
+    			width: 260px;
+    			margin-left: 30px;
+    			display: inline-block;
+    			line-height: 30px;
+    			span{
+    				/*float: left;*/
+    				font-size: 36px;
+    				font-family: Roboto-Light;
+    				color: #0994c6;
+    				margin-right: 20px;
+    			}
+    			p{
+    				float: right;
+    				font-size: 13px;
+    				font-family: Roboto-Regular;
+    				color: #798083;
+    				line-height: 15px;
+    				strong{
+    					margin-top: 20px;
+    					color: #2a3845;
+    				}
+    			}
+    			&:nth-child(2){
+    				margin-left: 100px;
+    			};
+    		}
+    	}
+    }
+    .top_charts{
+    	position: relative;
+    	width: 100%;
+    	text-align: left;
+    	padding-top: 15px;
+    }
+}
+
+  .pie_charts{
+    	position: relative;
+	    left: 22%;
+	    background-color: #fff;
+	    width: 25%;
+	    min-width: 300px;
+	    max-width: 436px;
+	    height: 300px;
+	    min-height: 200px;
+	    top: 30px;
+	    text-align: center;
+	    padding: 20px;
+	    padding-top: 0;
+	 /*   border-bottom: 1px solid #d7dadd;
+	    border-right: 1px solid #d7dadd;*/
+	    border-radius: 3px;
+	    margin-bottom: 35px;
+	    float: left;
+	    z-index: 9999;
+	  	margin-right: 30px;
+    }
+
+    .stat_new_mechanics{
+		position: relative;
+	    left: 22%;
+	    background-color: #fff;
+	    width: 21%;
+	   /* min-width: 300px;*/
+	    max-width: 360px;
+	    height: 135px;
+	    top: 30px;
+
+	    padding: 20px;
+	    padding-top: 0;
+	  	border-radius: 5px;
+	    border-radius: 3px;
+	    margin-bottom: 35px;
+	    float: left;
+	    z-index: 9999;
+	    margin-right: 30px;
+	    margin-bottom: 10px;
+	    .statistic_session{
+	    	position: absolute;
+			height: 135px;
+			top: 122%;
+			left: 0;
+			width: 100%;
+			background-color: #fff;
+			padding-left: 40px;
+			border-radius: 5px;
+			h2{
+				font-family: Roboto-Regular;
+				font-size: 30px;
+				color: #3d4d65;
+				margin-bottom: 5px;
+				margin-top: 37px;
+			}
+			p{
+				font-size: 14px;
+				font-family: Roboto-Regular;
+				color: #54657e;
+			}
+			img{
+
+				right: 40px;
+				top: 45px;
+				display: block;
+				position: absolute;
+			}
+	    }
+
+    }
+
+    
+.statistic_daily_load{
+	position: relative;
+	    left: 22%;
+	    background-color: #fff;
+	    width: 21%;
+	    /*min-width: 300px;*/
+	    max-width: 436px;
+	    height: 130px;
+	    top: 30px;
+	    text-align: center;
+	    padding: 20px;
+	    padding-top: 0;
+	    padding-left: 0;
+	    border-bottom: 1px solid #d7dadd;
+	    border-right: 1px solid #d7dadd;
+	    border-radius: 3px;
+	    margin-bottom: 35px;
+	    float: left;
+	    z-index: 9999;
+	    margin-right: 30px;
+	    margin-bottom: 10px;
+	
+		margin-right: 0;
+		height: 300px;
+		margin-bottom: 0;
+}
+
+

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Заголовок </title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+      <script src="js/Chart.bundle.js"></script>
+   <script src="js/utils.js"></script>
+
+
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Calls',     5278],
+          ['Miles',      3760],
+          ['Cals',    498]
+        ]);
+
+        var options = {
+          // title: 'My Daily Activities',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+
+    <aside>
+      <div class="container-fluid">
+        <h1>Raven <span>X</span></h1>
+        <h6><a href="settings/dashboard.html">Dashboard</a></h6>
+        <p><a href="">Help Desk</a></p>
+        <p><a href="#">Clients</a></p>
+        <p><a href="#">Invoice</a></p>
+        <p><a href="#">Reports</a></p>
+        <p><a href="#">Managers</a></p>
+        <p><a href="#">My mechanics</a></p>
+        <p><a href="#">Raiting staffs</a></p>
+       <!--  <ul>
+          <li><a href="#" class="active">Help Desk</a> </li>
+          <li><a href="appointments.html">Clients </a></li>
+          <li><a href="quotes.html">Invoice </a></li>
+          <li><a href="recommendedservices.html">Reports</a></li>
+          <li><a href="advice.html">Managers</a></li>
+          <li><a href="mymechanics.html">My  mechanics</a></li>
+        </ul> -->
+      </div>
+    </aside>
+
+    <nav class="visible-xs visible-sm">
+      <div class="container">
+        <div class="col-xs-5 ">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-bars"></i></a>
+            <ul class="dropdown-menu text-right">
+             <li><a href="#">My cars</a> <div class="calcCar"><span id = "calcCarspan"></span></div></li>
+              <li><a href="appointments.html">Appointments</a></li>
+              <li><a href="quotes.html">Quotes</a></li>
+              <li><a href="recommendedservices.html">Recommended <br> Services</a><div class="calcRecomendedServises"><span id = "calcRecomendedServisesSpan"></span></div></li>
+              <li><a href="advice.html">Advice</a></li>
+              <li><a href="mymechanics.html">My mechanics</a></li>
+              <li><a href="gifts&cupons.html">Gifts & Coupons</a></li>
+              <li><hr></li>
+              <li><a href="billing.html"> Billing & Payments</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="visible-xs MenuUser">
+      <div class="container">
+        <div class="col-xs-5 ">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+           <i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+            <ul class="dropdown-menu text-right">
+               <li><a href="#">Notification <i class="fa fa-bell" aria-hidden="true"></i></a></li>
+               <li><a href="#" onclick="openuser();">Setting  <i class="fa fa-cog" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+  
+    <div class="openUser">
+      <ul>
+        <li><a href="settings/accountsettings.html">Account Settings</a></li>
+        <li><a href="ravenxcredits.html">Gifting & Coupons</a></li>
+        <br>
+        <li><hr></li>
+        <li><a href="../index.html">Sing Out</a></li>
+      </ul>
+    </div>
+
+
+    <header>
+     <div class="top_line">
+       <ul class="list-inline">
+        
+         <li><a href="#">Notification <i class="fa fa-bell" aria-hidden="true"></i></a></li>
+         <li><a href="#" onclick="openuser();">Setting  <i class="fa fa-cog" aria-hidden="true"></i></a></li>
+       </ul>
+     </div>
+    </header>
+
+    <div class="statistics_top_line">
+
+      <div class="number_statictics">
+        <ul class="ul_number_statictics">
+          <li>
+            <span>+68%</span>
+            <p><strong>SALES</strong> <br>20 Jan 2018</p>
+          </li>
+          <li>
+            <span>$704734</span>
+            <p><strong>TOTAL AMOUNT</strong><br>15 Jun 2018</p>
+          </li>
+          <li>
+            <span>+275</span>
+            <p><strong>Registrations</strong><br>15 Jun 2018</p>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="top_charts">
+        <div style="width:100%;">
+          <canvas id="myChart" style="max-height: 500px;"></canvas>
+        </div>
+
+        
+
+      </div>
+
+    </div>
+
+
+    <div class="pie_charts" id = "pie_charts">
+
+
+    
+    
+<div style="width:100%;">
+        <canvas id="myChart_pie"></canvas>
+    </div>
+<script>
+     
+        
+
+        // window.onload = function() {
+        //     var ctx2 = document.getElementById("myChart_pie").getContext("2d");
+        //     window.myLine = new Chart(ctx2, config2);
+        // };
+
+    </script>
+
+  <!--     <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Calls',     5278],
+            ['Miles',      3768],
+            ['Cals',      419],
+          ]);
+
+          var options = {
+           colors:['#7ec8ff','#89ea1f', '#fdc740'],
+        
+           'width':400,
+           'height':290,
+            pieHole: 0.3,
+            'backgroundColor':'transparent',
+
+          };
+
+          var chart = new google.visualization.PieChart(document.getElementById('pie_charts'));
+          chart.draw(data, options);
+        }
+    </script> -->
+    </div>
+
+    <div class="stat_new_mechanics">
+      <!-- <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Calls',     75],
+          ['Miles',      25],
+        ]);
+
+        var options = {
+         colors:['#ff9047','#eceff4'],
+         'width':170,
+         'height':170,
+          pieHole: 0.7,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+      <div id="piechart_3d" ></div> -->
+
+
+      <h2>15</h2>
+      <p>NEW MECHANIC</p>
+      <div class="statistic_session">
+        <h2>85</h2>
+        <p>Sessions (Last Week)</p>
+        <img src="img/statistics_session.png" alt="statistics session">
+      </div>
+      
+    </div>
+
+    
+  
+    <div class="statistic_daily_load">
+      <div id="chart_div"></div>
+
+      <script>
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawBasic);
+
+        function drawBasic() {
+
+              var data = new google.visualization.DataTable();
+              data.addColumn('string', 'Topping');
+              data.addColumn('number', 'Slices');
+
+              data.addRows([
+               ['APR', 10000],
+               ['MAY', 7500],
+               ['JUN', 3200],
+               ['JULY', 12780],
+               ['SEP', 18000],
+               ['OCT', 16423],
+               ['NOV', 18434],
+              ]);
+
+              var options = {
+                'width':383,
+                'height':300,
+                'legend':'none'
+              };
+
+              var chart = new google.visualization.ColumnChart(
+                document.getElementById('chart_div'));
+
+              chart.draw(data, options);
+            }
+      </script>
+    </div>
+
+
+
+
+
+    <script>
+         
+          var config = {
+              type: 'line',
+              data: {
+                  labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                  datasets: [{
+                      label: "Visitets",
+                      backgroundColor: 'rgba(252,233,227,.4)',
+                      borderColor: '#d74a54',
+                     data: [12, 15 ,9 ,23 ,19 ,2 ,5, 10, 12, 14, 5, 14],
+
+
+                    
+                      fill: '1'
+                  }, {
+                      label: "Months",
+                      fill: false,
+                      backgroundColor: 'transperent',
+                      borderColor: '#fff',
+                      data: [0, 0 ,0 ,0 ,0 ,0 ,0, 0, 0, 0 ,0, 0],
+                  }]
+              },
+          };
+
+          var config2 = {
+            type: 'doughnut',
+            data: {
+                labels: ["January", "February", "March"],
+                datasets: [{
+                    label: "My First dataset",
+                    backgroundColor: ['#7ec8ff', '#89ea1f', '#fdc740'],
+                    
+                   data: [12, 15 ,9],
+
+
+                  
+                    fill: '1'
+                }, {
+                    label: "My Second dataset",
+                    fill: false,
+                    backgroundColor: 'transperent',
+                    borderColor: '#fff',
+                    data: [0, 0 ,0],
+                }]
+            },
+          
+        };
+
+          window.onload = function() {
+              var ctx = document.getElementById("myChart").getContext("2d");
+              var ctx2 = document.getElementById("myChart_pie").getContext("2d");
+              window.myLine = new Chart(ctx, config);
+              window.myLine = new Chart(ctx2, config2);
+          };
+         
+        </script>
+      
+
+
+
+
+    <!-- Modal -->
+        
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script>
+      $(document).ready(
+          function() {
+              $("html").niceScroll({cursorcolor:"#000"});
+          }
+      );
+    </script>
+
+
+
+    <script src= "js/main.js"></script>
+  </body>
+</html>
